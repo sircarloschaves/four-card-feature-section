@@ -49,3 +49,97 @@ svg {
   max-width: 100%;
   display: block;
 }
+
+body {
+  background-color: var(--clr-ne-600);
+  padding: 1.9rem;
+  font-family: var(--ff-poppins);
+}
+
+header {
+  text-align: center;
+  margin-block-start: 3rem;
+} 
+
+.header-title {
+  font-weight: var(--fw-200);
+  font-size: 1.5rem;
+  color: var(--clr-ne-200);
+}
+
+.header-title em {
+  font-weight: var(--fw-600);
+}
+
+.header-text {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  color: var(--clr-ne-400);
+  margin-block-start: 1rem;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-block-start: 4rem;
+}
+
+.card {
+  box-shadow: rgba(50, 50, 93, 0.097) 0px 13px 27px -5px, rgba(0, 0, 0, 0.112) 0px 8px 16px -8px;
+  padding-block: 1.5rem;
+  padding-inline: 1.7rem;
+  border-top: 4px solid;
+  border-radius: .3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:nth-child(1) {
+  border-color: var(--clr-pr-cyan);
+}
+
+.card:nth-child(2) {
+  border-color: var(--clr-pr-red);
+}
+
+.card:nth-child(3) {
+  border-color: var(--clr-pr-orange);
+}
+
+.card:nth-child(4) {
+  border-color: var(--clr-pr-blue);
+}
+
+.card-title {
+  font-weight: var(--fw-600);
+  font-size: 1.3rem;
+  color: var(--clr-ne-200);
+}
+
+.card-text {
+  font-size: .85rem;
+  font-weight: var(--fw-400);
+  color: var(--clr-ne-400);
+  line-height: 1.6;
+  margin-block-start: .3em;
+}
+
+.card .img {
+  width: 60px;
+  align-self: flex-end;
+  margin-block-start: 1.7rem;
+}
+
+footer {
+  font-size: .85rem;
+  margin-top: .8em;
+  text-align: center;
+  z-index: 2;
+}
+
+@media screen and (min-width: 315px) {
+  .card-wrapper {
+    width: 315px;
+  }
+}

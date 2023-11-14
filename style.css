@@ -59,7 +59,7 @@ body {
 header {
   text-align: center;
   margin-block-start: 3rem;
-} 
+}
 
 .header-title {
   font-weight: var(--fw-200);
@@ -81,6 +81,11 @@ header {
 .card-wrapper {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-areas:
+    'sp'
+    'te'
+    'ka'
+    'ca';
   gap: 1.5rem;
   margin-block-start: 4rem;
 }
@@ -96,18 +101,22 @@ header {
 }
 
 .card:nth-child(1) {
+  grid-area: sp;
   border-color: var(--clr-pr-cyan);
 }
 
 .card:nth-child(2) {
+  grid-area: te;
   border-color: var(--clr-pr-red);
 }
 
 .card:nth-child(3) {
+  grid-area: ka;
   border-color: var(--clr-pr-orange);
 }
 
 .card:nth-child(4) {
+  grid-area: ca;
   border-color: var(--clr-pr-blue);
 }
 
@@ -138,8 +147,54 @@ footer {
   z-index: 2;
 }
 
-@media screen and (min-width: 315px) {
+@media screen and (min-width: 375px) {
   .card-wrapper {
     width: 315px;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 2.5rem;
+  }
+
+  .header-title {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  .header-text {
+    width: 66ch;
+  }
+
+  .card-wrapper {
+    width: 1100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      '.  .  te te  .  .'
+      'sp sp te te ca ca'
+      'sp sp ka ka ca ca'
+      '.  .  ka ka .  .';
+    margin-block-start: 2.55rem;
+  }
+
+  .card-text {
+    font-size: .9rem;
+  }
+
+  .card .img {
+    margin-block-start: 1.6rem;
   }
 }
